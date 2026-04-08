@@ -1,0 +1,321 @@
+/* -----------------------------------------------
+   Inspiration Gallery Block
+   Dark background with category pills, filter
+   dropdowns, CTA, and image grid
+----------------------------------------------- */
+
+.inspiration-gallery-container {
+  background: #111111;
+}
+
+.inspiration-gallery-container .inspiration-gallery-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.inspiration-gallery {
+  background: #111111;
+  padding: 40px 60px 60px;
+  color: #ffffff;
+}
+
+/* -----------------------------------------------
+   Category Pills
+----------------------------------------------- */
+.ig-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.ig-pill {
+  background: #2a2a2a;
+  border: 1.5px solid #444444;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.ig-pill:hover {
+  background: #333333;
+  border-color: #666666;
+}
+
+.ig-pill.active {
+  background: #29aaff;
+  border-color: #29aaff;
+  color: #ffffff;
+}
+
+/* -----------------------------------------------
+   Filter Dropdowns
+----------------------------------------------- */
+.ig-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.ig-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 130px;
+}
+
+.ig-filter-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #888888;
+  letter-spacing: 0.08em;
+  padding-left: 2px;
+  text-transform: uppercase;
+}
+
+.ig-select-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ig-select-wrap select {
+  width: 100%;
+  background: #222222;
+  border: 1.5px solid #444444;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 36px 10px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s ease;
+}
+
+.ig-select-wrap select:hover {
+  border-color: #666666;
+}
+
+.ig-select-wrap select:focus {
+  outline: none;
+  border-color: #29aaff;
+}
+
+.ig-chevron {
+  position: absolute;
+  right: 12px;
+  width: 12px;
+  height: 8px;
+  pointer-events: none;
+  stroke: #888888;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------------
+   CTA Row
+----------------------------------------------- */
+.ig-cta-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ig-cta-btn {
+  display: inline-block;
+  background: #e63946;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 14px 36px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.ig-cta-btn:hover {
+  background: #c9232f;
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.ig-cta-btn:active {
+  transform: translateY(0);
+}
+
+/* -----------------------------------------------
+   Results Count
+----------------------------------------------- */
+.ig-count {
+  text-align: center;
+  color: #888888;
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+.ig-empty {
+  text-align: center;
+  color: #666666;
+  font-size: 15px;
+  padding: 40px 0;
+}
+
+/* -----------------------------------------------
+   Image Grid
+----------------------------------------------- */
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ig-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #222222;
+}
+
+.ig-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.ig-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ig-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Heart / Favourite button */
+.ig-heart {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+  z-index: 1;
+}
+
+.ig-heart svg {
+  width: 18px;
+  height: 18px;
+  stroke: #ffffff;
+  transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.ig-heart:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ig-heart.active svg {
+  fill: #e63946;
+  stroke: #e63946;
+}
+
+/* Card label — bottom-left gradient overlay */
+.ig-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 48px 16px 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 100%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  pointer-events: none;
+}
+
+/* -----------------------------------------------
+   Loading state
+----------------------------------------------- */
+.inspiration-gallery.loading {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inspiration-gallery.loading::after {
+  content: 'Loading...';
+  color: #666666;
+  font-size: 15px;
+}
+
+/* -----------------------------------------------
+   Responsive
+----------------------------------------------- */
+@media (width < 1100px) {
+  .inspiration-gallery {
+    padding: 36px 32px 48px;
+  }
+
+  .ig-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 768px) {
+  .inspiration-gallery {
+    padding: 28px 16px 40px;
+  }
+
+  .ig-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ig-filters {
+    gap: 8px;
+  }
+
+  .ig-filter {
+    min-width: calc(50% - 8px);
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .ig-pill {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (width < 480px) {
+  .ig-filter {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+}

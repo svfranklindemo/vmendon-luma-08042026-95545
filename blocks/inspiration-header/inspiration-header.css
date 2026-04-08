@@ -1,0 +1,82 @@
+/* -----------------------------------------------
+   Inspiration Header Block
+   Two-column layout: large title left, description right
+----------------------------------------------- */
+
+.inspiration-header-container {
+  background: #f0f0f0;
+}
+
+.inspiration-header-container .inspiration-header-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.inspiration-header {
+  display: flex;
+  align-items: flex-end;
+  padding: 48px 60px 52px;
+  background: #f0f0f0;
+  gap: 80px;
+}
+
+/* Left: Title */
+.ih-title {
+  flex: 0 0 auto;
+}
+
+.ih-title h1,
+.ih-title h2 {
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  color: #111111;
+  font-family: var(--black-font-family);
+}
+
+/* Right: Description */
+.ih-desc {
+  flex: 1;
+  padding-bottom: 10px;
+  max-width: 620px;
+}
+
+.ih-desc p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+}
+
+/* Responsive */
+@media (width < 900px) {
+  .inspiration-header {
+    gap: 40px;
+    padding: 40px 32px 44px;
+  }
+
+  .ih-title h1,
+  .ih-title h2 {
+    font-size: clamp(36px, 6vw, 52px);
+  }
+}
+
+@media (width < 640px) {
+  .inspiration-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 32px 20px 36px;
+  }
+
+  .ih-title h1,
+  .ih-title h2 {
+    font-size: 40px;
+  }
+
+  .ih-desc {
+    padding-bottom: 0;
+    max-width: 100%;
+  }
+}
