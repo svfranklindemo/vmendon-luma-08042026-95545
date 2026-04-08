@@ -6608,8 +6608,6 @@
 
     { "component": "text", "name": "surfaceLabel", "label": "Surface Label", "valueType": "string" },
     { "component": "text", "name": "surfaceOptions", "label": "Surface Options", "valueType": "string" }
-
-    // … rest of fields
   ]
 }
 
