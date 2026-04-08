@@ -99,9 +99,5 @@
       "wizard",
       "range"
     ]
-  },
-  {
-  "id": "filters",
-  "components": ["filters"]
   }
 ]
