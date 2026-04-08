@@ -6596,5 +6596,21 @@
   {
     "id": "order-confirmation",
     "fields": []
-  }
+  },
+  {
+  "id": "filters",
+  "fields": [
+    { "component": "text", "name": "tabsLabel", "label": "Tabs Label", "valueType": "string" },
+    { "component": "text", "name": "tabs", "label": "Tabs", "valueType": "string" },
+
+    { "component": "text", "name": "brandLabel", "label": "Brand Label", "valueType": "string" },
+    { "component": "text", "name": "brandOptions", "label": "Brand Options", "valueType": "string" },
+
+    { "component": "text", "name": "surfaceLabel", "label": "Surface Label", "valueType": "string" },
+    { "component": "text", "name": "surfaceOptions", "label": "Surface Options", "valueType": "string" }
+
+    // … rest of fields
+  ]
+}
+
 ]
